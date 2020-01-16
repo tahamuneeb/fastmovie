@@ -1,6 +1,6 @@
 //
 //  MovieDetailViewController.swift
-//  CIViperGenerator
+//  
 //
 //  Created by Taha Muneeb on 15.01.2020.
 //  Copyright © 2020 Taha Muneeb. All rights reserved.
@@ -30,11 +30,12 @@ class MovieDetailViewController: BaseVC {
     }
     
     func setMovie(){
+        // set movie details
         if let mov = movie{
             lblName.text = mov.title ?? ""
             lblYear.text = Helper.year(string: mov.release_date ?? "")
             tvDescription.text = mov.overview ?? ""
-            lblRating.text = String(mov.vote_average ?? 0)
+            lblRating.text = String(mov.vote_average?.doubleValue ?? 0)
             if let poster = mov.poster_path{
                 if let url = URL(string: Constants.imageURL + poster){
                     imgMovie.loadImage(url, placeholder: Constants.placeholder)

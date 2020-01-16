@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Place to define application helpers
 struct Helper {
     static func year(string:String) -> String {
         let formatter = DateFormatter()

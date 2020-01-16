@@ -8,7 +8,9 @@
 
 import Foundation
 import UIKit
+import CoreData
 
+// Place to define extentions
 extension Date{
     func movieFilterDate() -> String{
         let formatter = DateFormatter()
@@ -34,4 +36,9 @@ extension UIImageView{
         self.layer.shadowOffset = CGSize.init(width: 0, height: 2)
         self.layer.shadowRadius = 5
     }
+}
+
+extension CodingUserInfoKey {
+    // Helper property to retrieve the Core Data managed object context
+    static let managedObjectContext = CodingUserInfoKey(rawValue: "managedObjectContext")
 }

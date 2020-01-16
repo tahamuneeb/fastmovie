@@ -9,6 +9,7 @@
 import Foundation
 import SystemConfiguration
 
+//Class to check for network connectivity status
 public class Reachability {
 
     class func isConnectedToNetwork() -> Bool {

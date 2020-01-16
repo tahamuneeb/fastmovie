@@ -41,6 +41,7 @@
 		A0B3E23823CF42690054207C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B3E23723CF42690054207C /* Extensions.swift */; };
 		A0B3E23A23CF546D0054207C /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B3E23923CF546D0054207C /* ImageManager.swift */; };
 		A0B3E23C23CF5D280054207C /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B3E23B23CF5D280054207C /* Helper.swift */; };
+		A0B3E23F23D058720054207C /* SingleTon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B3E23E23D058720054207C /* SingleTon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		A0B3E23723CF42690054207C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A0B3E23923CF546D0054207C /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		A0B3E23B23CF5D280054207C /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		A0B3E23E23D058720054207C /* SingleTon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +213,7 @@
 				A0B3E23723CF42690054207C /* Extensions.swift */,
 				A0B3E23923CF546D0054207C /* ImageManager.swift */,
 				A0B3E23B23CF5D280054207C /* Helper.swift */,
+				A0B3E23E23D058720054207C /* SingleTon.swift */,
 			);
 			path = Utlitlies;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 				A01E2CDC23CF32750070064D /* MovieCell.swift in Sources */,
 				A01E2CDE23CF34B40070064D /* CategoriesCollectionView.swift in Sources */,
 				A0B3E23523CF41770054207C /* Movie.swift in Sources */,
+				A0B3E23F23D058720054207C /* SingleTon.swift in Sources */,
 				A01E2CD423CF2C880070064D /* MovieDetailPresenter.swift in Sources */,
 				A01E2CD823CF2C880070064D /* MovieListRouter.swift in Sources */,
 				A01E2CD623CF2C880070064D /* MovieListViewController.swift in Sources */,

@@ -1,6 +1,6 @@
 //
 //  MovieListViewController.swift
-//  CIViperGenerator
+//  
 //
 //  Created by Taha Muneeb on 15.01.2020.
 //  Copyright © 2020 Taha Muneeb. All rights reserved.
@@ -16,7 +16,7 @@ protocol MovieListViewControllerInterface: class {
     func moviesListFetchFailed(message:String)
     func moviesFetch(moviesList:[Movie])
 }
-
+//MARK: - MovieListViewController
 class MovieListViewController: BaseVC {
     var presenter: MovieListPresenterInterface?
     
@@ -30,13 +30,19 @@ class MovieListViewController: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.addSubview(refreshControl)
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         collectionView.selectionDelegate = self
         presenter?.fetchMovies(type: .popular)
         
     }
     
+    @objc func refresh(){
+        refreshControl.endRefreshing()
+    }
+    
 }
 
+//MARK: - UITableViewDataSource
 extension MovieListViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movies.count
@@ -52,7 +58,7 @@ extension MovieListViewController: UITableViewDelegate, UITableViewDataSource{
         presenter?.showMovieDetail(movie: movies[indexPath.row])
     }
 }
-
+//MARK: - MovieListViewControllerInterface
 extension MovieListViewController: MovieListViewControllerInterface {
     
     func moviesListFetchFailed(message: String) {
@@ -80,6 +86,7 @@ extension MovieListViewController: MovieListViewControllerInterface {
     }
 }
 
+//MARK: - CategoriesCollectionViewSelectionDelegate
 extension MovieListViewController: CategoriesCollectionViewSelectionDelegate{
     func collectionViewSelected(type: MovieType) {
         presenter?.fetchMovies(type: type)

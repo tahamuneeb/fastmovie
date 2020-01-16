@@ -15,8 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
- 
+        
+        SingleTon.shared.cdContext = persistentContainer.viewContext
+        SingleTon.shared.storeDescriptions = persistentContainer.persistentStoreDescriptions
         return true
     }
 
@@ -60,6 +61,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
+        
         return container
     }()
 

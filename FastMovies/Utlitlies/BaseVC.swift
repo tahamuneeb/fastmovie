@@ -14,7 +14,7 @@ class BaseVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    // Generic Alert
     func showAlert(title:String, message:String, action:((UIAlertAction) -> Void)?){
         let alert = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
         

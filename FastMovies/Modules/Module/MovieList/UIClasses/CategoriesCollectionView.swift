@@ -27,9 +27,7 @@ class CategoriesCollectionView: UICollectionView, UICollectionViewDelegateFlowLa
         self.delegate = self
         self.dataSource = self
         self.reloadData()
-//        if let layout = self.collectionViewLayout as? UICollectionViewFlowLayout{
-//            layout.estimatedItemSize = CGSize.init(width: 1, height: 1)
-//        }
+
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -61,17 +59,6 @@ class CategoriesCollectionView: UICollectionView, UICollectionViewDelegateFlowLa
         }
         
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return
-//    }
-    
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+
 
 }

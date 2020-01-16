@@ -21,7 +21,7 @@ class MovieCell: UITableViewCell {
         lblName.text = movie.title ?? ""
         lblYear.text = Helper.year(string: movie.release_date ?? "")
         lblDescription.text = movie.overview ?? ""
-        lblRating.text = String(movie.vote_average ?? 0)
+        lblRating.text = String(movie.vote_average?.doubleValue ?? 0)
         if let poster = movie.poster_path{
             if let url = URL(string: Constants.imageURL + poster){
                 imgMovie.loadImage(url, placeholder: Constants.placeholder)

@@ -11,6 +11,7 @@ import UIKit
 
 let imageCache = NSCache<AnyObject, AnyObject>()
 
+// UIImageView Subclass to download and cache images
 class ImageLoader: UIImageView {
 
     var imageURL: URL?

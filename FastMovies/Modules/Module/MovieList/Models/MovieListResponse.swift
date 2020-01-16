@@ -1,9 +1,13 @@
 import Foundation
 struct MovieListResponse : Codable {
-	let page : Int?
-	let total_results : Int?
-	let total_pages : Int?
-	let results : [Movie]?
+	var page : Int?
+	var total_results : Int?
+	var total_pages : Int?
+	var results : [Movie]?
+    
+    init(){
+        
+    }
 
 	enum CodingKeys: String, CodingKey {
 

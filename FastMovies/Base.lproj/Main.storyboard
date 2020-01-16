@@ -32,13 +32,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fast Movies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6A5-pt-628">
-                                <rect key="frame" x="20" y="64" width="335" height="42"/>
+                                <rect key="frame" x="20" y="64" width="335" height="45"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="36"/>
                                 <color key="textColor" name="OrangeText"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pwK-Qk-ecq" customClass="CategoriesCollectionView" customModule="FastMovies" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="114" width="375" height="55"/>
+                                <rect key="frame" x="0.0" y="117" width="375" height="55"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="486-KH-ICQ"/>
@@ -77,7 +77,7 @@
                                 </cells>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="biX-Vz-6FW">
-                                <rect key="frame" x="0.0" y="169" width="375" height="609"/>
+                                <rect key="frame" x="0.0" y="172" width="375" height="606"/>
                                 <color key="backgroundColor" name="BackGoundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieCell" rowHeight="150" id="vIk-6H-Qk7" customClass="MovieCell" customModule="FastMovies" customModuleProvider="target">
@@ -100,13 +100,13 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sY1-h2-A7o">
-                                                    <rect key="frame" x="138" y="12.000000000000002" width="221" height="18.666666666666671"/>
+                                                    <rect key="frame" x="138" y="12" width="221" height="20"/>
                                                     <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="16"/>
                                                     <color key="textColor" name="PurpleText"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7L-Mo-TLm">
-                                                    <rect key="frame" x="138" y="38.666666666666664" width="100" height="12.666666666666664"/>
+                                                    <rect key="frame" x="138" y="40" width="100" height="12.666666666666664"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="12.67" id="PYL-rb-mzM"/>
                                                         <constraint firstAttribute="width" constant="100" id="tYK-W9-cjm"/>
@@ -116,7 +116,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label sds" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYy-gO-weM">
-                                                    <rect key="frame" x="138" y="63.333333333333343" width="221" height="19"/>
+                                                    <rect key="frame" x="138" y="64.666666666666671" width="221" height="17.666666666666671"/>
                                                     <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="14"/>
                                                     <color key="textColor" name="TextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -171,7 +171,7 @@
                                                 <constraint firstItem="sYy-gO-weM" firstAttribute="leading" secondItem="7F9-51-4j1" secondAttribute="trailing" constant="20" id="cNd-9A-1KU"/>
                                                 <constraint firstItem="7F9-51-4j1" firstAttribute="leading" secondItem="GiV-fC-dIx" secondAttribute="leading" constant="20" id="czu-b7-X1u"/>
                                                 <constraint firstItem="zLx-T2-PZK" firstAttribute="leading" secondItem="GiV-fC-dIx" secondAttribute="leading" constant="118" id="i8H-pD-cMs"/>
-                                                <constraint firstItem="zLx-T2-PZK" firstAttribute="top" secondItem="CGf-Z1-0VI" secondAttribute="bottom" constant="34.670000000000002" id="mVI-fk-baR"/>
+                                                <constraint firstItem="zLx-T2-PZK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="CGf-Z1-0VI" secondAttribute="bottom" constant="34.670000000000002" id="mVI-fk-baR"/>
                                                 <constraint firstItem="sY1-h2-A7o" firstAttribute="top" secondItem="GiV-fC-dIx" secondAttribute="top" constant="12" id="wgp-Au-chZ"/>
                                                 <constraint firstItem="CGf-Z1-0VI" firstAttribute="top" secondItem="sYy-gO-weM" secondAttribute="bottom" constant="12" id="ylI-mW-eAk"/>
                                                 <constraint firstAttribute="trailing" secondItem="zLx-T2-PZK" secondAttribute="trailing" id="ywu-F4-kzd"/>
@@ -228,7 +228,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fast Movies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kX-6V-0v4">
-                                <rect key="frame" x="133.33333333333334" y="52" width="108.33333333333334" height="25"/>
+                                <rect key="frame" x="131.33333333333334" y="52" width="112.66666666666666" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="JoL-fd-ao2"/>
                                 </constraints>
