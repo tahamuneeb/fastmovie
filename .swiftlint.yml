@@ -1,1 +1,4 @@
 line_length: 200
+function_body_length: 200
+excluded:
+  - FastMoviesTests

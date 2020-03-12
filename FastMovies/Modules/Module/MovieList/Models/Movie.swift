@@ -47,25 +47,81 @@ class Movie: NSManagedObject, Codable {
         self.init(entity: entity, insertInto: managedObjectContext)
 
 		let values = try decoder.container(keyedBy: CodingKeys.self)
-        popularity = try NSNumber.init(value: values.decodeIfPresent(Double.self, forKey: .popularity) ?? 0.0)
-		movieID = try  NSNumber.init(value: values.decodeIfPresent(Int.self, forKey: .movieID) ?? 0)
-		video = try NSNumber.init(value: values.decodeIfPresent(Bool.self, forKey: .video) ?? false)
-		voteCount = try NSNumber.init(value: values.decodeIfPresent(Int.self, forKey: .voteCount) ?? 0)
-		voteAverage = try NSNumber.init(value: values.decodeIfPresent(Double.self, forKey: .voteAverage) ?? 0)
-		title = try values.decodeIfPresent(String.self, forKey: .title)
-		releaseDate = try values.decodeIfPresent(String.self, forKey: .releaseDate)
-		originalLanguage = try values.decodeIfPresent(String.self, forKey: .originalLanguage)
-		originalTitle = try values.decodeIfPresent(String.self, forKey: .originalTitle)
-		backdropPath = try values.decodeIfPresent(String.self, forKey: .backdropPath)
-		adult = try NSNumber.init(value: values.decodeIfPresent(Bool.self, forKey: .adult) ?? false)
-		overview = try values.decodeIfPresent(String.self, forKey: .overview)
-		posterPath = try values.decodeIfPresent(String.self, forKey: .posterPath)
-        type = try values.decodeIfPresent(String.self, forKey: .type)
+        do {
+            popularity = try NSNumber.init(value: values.decodeIfPresent(Double.self, forKey: .popularity) ?? 0.0)
+        } catch {
+            popularity = NSNumber.init(value: 0)
+        }
+        do {
+            movieID = try NSNumber.init(value: values.decodeIfPresent(Int.self, forKey: .movieID) ?? 0)
+        } catch {
+            movieID = NSNumber.init(value: 0)
+        }
+        do {
+            video = try NSNumber.init(value: values.decodeIfPresent(Bool.self, forKey: .video) ?? false)
+        } catch {
+            video = NSNumber.init(value: false)
+        }
+        do {
+            voteCount = try NSNumber.init(value: values.decodeIfPresent(Int.self, forKey: .voteCount) ?? 0)
+        } catch {
+            voteCount =  NSNumber.init(value: 0)
+        }
+		do {
+            voteAverage = try NSNumber.init(value: values.decodeIfPresent(Double.self, forKey: .voteAverage) ?? 0)
+        } catch {
+            voteAverage =  NSNumber.init(value: 0)
+        }
+		do {
+            title = try values.decodeIfPresent(String.self, forKey: .title)
+        } catch {
+            title =  ""
+        }
+		do {
+            releaseDate = try values.decodeIfPresent(String.self, forKey: .releaseDate)
+        } catch {
+            releaseDate =  ""
+        }
+        do {
+            originalLanguage = try values.decodeIfPresent(String.self, forKey: .originalLanguage)
+        } catch {
+            originalLanguage =  ""
+        }
+		do {
+            originalTitle = try values.decodeIfPresent(String.self, forKey: .originalTitle)
+        } catch {
+            originalTitle =  ""
+        }
+		do {
+            backdropPath = try values.decodeIfPresent(String.self, forKey: .backdropPath)
+        } catch {
+            backdropPath =  ""
+        }
+		do {
+            adult = try NSNumber.init(value: values.decodeIfPresent(Bool.self, forKey: .adult) ?? false)
+        } catch {
+            adult = NSNumber.init(value: false)
+        }
+		do {
+            overview = try values.decodeIfPresent(String.self, forKey: .overview)
+        } catch {
+            overview =  ""
+        }
+		do {
+            posterPath = try values.decodeIfPresent(String.self, forKey: .posterPath)
+        } catch {
+            posterPath =  ""
+        }
+		do {
+            type = try values.decodeIfPresent(String.self, forKey: .type) ?? ""
+        } catch {
+            type =  ""
+        }
 	}
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(popularity?.intValue, forKey: .popularity)
+        try container.encode(popularity?.doubleValue, forKey: .popularity)
         try container.encode(movieID?.intValue, forKey: .movieID)
         try container.encode(video?.boolValue, forKey: .video)
         try container.encode(voteCount?.intValue, forKey: .voteCount)
