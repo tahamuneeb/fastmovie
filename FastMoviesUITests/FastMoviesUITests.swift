@@ -7,6 +7,8 @@
 //
 
 import XCTest
+import UIKit
+import Foundation
 
 class FastMoviesUITests: XCTestCase {
 
@@ -23,13 +25,37 @@ class FastMoviesUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
+    func testMovieTap() {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
+        app.launchArguments = ["enable-testing"]
         app.launch()
+        app.tables.firstMatch.cells.firstMatch.tap()
 
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+    
+    func testMovieDetailBackTap() {
+        // UI tests must launch the application that they test.
+        let app = XCUIApplication()
+        app.launchArguments = ["enable-testing"]
+        app.launch()
+        app.tables.firstMatch.cells.firstMatch.tap()
+        app.buttons.matching(identifier: "detailBackBtn").firstMatch.tap()
+
+    }
+    
+    func testMovieFilterTopRated() {
+        let app = XCUIApplication()
+        app.launchArguments = ["enable-testing"]
+        app.launch()
+        app.collectionViews.firstMatch.cells.element(boundBy: 1).tap()
+    }
+    
+    func testMovieFilterUpComing() {
+        let app = XCUIApplication()
+        app.launchArguments = ["enable-testing"]
+        app.launch()
+        app.collectionViews.firstMatch.cells.element(boundBy: 2).tap()
     }
 
     func testLaunchPerformance() {
