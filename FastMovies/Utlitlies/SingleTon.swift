@@ -11,17 +11,16 @@ import CoreData
 
 class SingleTon {
     static var shared = SingleTon()
-    
-    var cdContext:NSManagedObjectContext!
+
+    var cdContext: NSManagedObjectContext!
     var storeDescriptions: [NSPersistentStoreDescription]!
-    
+
     init() {
         DispatchQueue.main.async {
-            self.cdContext = Constants.appDelegate.persistentContainer.viewContext
-            
+            self.cdContext = Constants.appDelegate?.persistentContainer.viewContext
+
         }
-        
+
     }
-    
-    
+
 }

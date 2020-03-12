@@ -10,14 +10,14 @@ import Foundation
 
 // Place to define application helpers
 struct Helper {
-    static func year(string:String) -> String {
+    static func year(string: String) -> String {
         let formatter = DateFormatter()
         formatter.locale = Locale.init(identifier: "en")
         formatter.dateFormat = "yyyy-MM-dd"
-        if let date = formatter.date(from: string){
+        if let date = formatter.date(from: string) {
             formatter.dateFormat = "yyyy"
             return formatter.string(from: date)
-        }else{
+        } else {
             return ""
         }
     }

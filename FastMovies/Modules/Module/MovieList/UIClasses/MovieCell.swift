@@ -9,30 +9,29 @@
 import UIKit
 
 class MovieCell: UITableViewCell {
-    
-    @IBOutlet weak var lblName:UILabel!
-    @IBOutlet weak var lblYear:UILabel!
-    @IBOutlet weak var lblDescription:UILabel!
-    @IBOutlet weak var lblRating:UILabel!
-    @IBOutlet weak var icoStar:UIImageView!
-    @IBOutlet weak var imgMovie:ImageLoader!
-    
-    func setData(movie:Movie) {
+
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblYear: UILabel!
+    @IBOutlet weak var lblDescription: UILabel!
+    @IBOutlet weak var lblRating: UILabel!
+    @IBOutlet weak var icoStar: UIImageView!
+    @IBOutlet weak var imgMovie: ImageLoader!
+
+    func setData(movie: Movie) {
         lblName.text = movie.title ?? ""
-        lblYear.text = Helper.year(string: movie.release_date ?? "")
+        lblYear.text = Helper.year(string: movie.releaseDate ?? "")
         lblDescription.text = movie.overview ?? ""
-        lblRating.text = String(movie.vote_average?.doubleValue ?? 0)
-        if let poster = movie.poster_path{
-            if let url = URL(string: Constants.imageURL + poster){
+        lblRating.text = String(movie.voteAverage?.doubleValue ?? 0)
+        if let poster = movie.posterPath {
+            if let url = URL(string: Constants.imageURL + poster) {
                 imgMovie.loadImage(url, placeholder: Constants.placeholder)
-            }else{
+            } else {
                 imgMovie.image = Constants.placeholder
             }
-        }else{
+        } else {
             imgMovie.image = Constants.placeholder
         }
-        
-        
+
     }
 
     override func awakeFromNib() {

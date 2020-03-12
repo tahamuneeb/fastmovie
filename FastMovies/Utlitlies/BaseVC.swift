@@ -15,14 +15,13 @@ class BaseVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     // Generic Alert
-    func showAlert(title:String, message:String, action:((UIAlertAction) -> Void)?){
+    func showAlert(title: String, message: String, action: ((UIAlertAction) -> Void)?) {
         let alert = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
-        
-        let ok = UIAlertAction.init(title: "Ok", style: .default, handler: action)
-        alert.addAction(ok)
+
+        let okAction = UIAlertAction.init(title: "Ok", style: .default, handler: action)
+        alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
-        
+
     }
 
 }
-

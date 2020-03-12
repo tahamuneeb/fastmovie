@@ -11,10 +11,10 @@ import UIKit
 
 // Place to define constants values
 struct Constants {
-    static var apiKey:String = "d140b2e325f681a0b68c1a936e39df83"
-    static var baseURL:String = "https://api.themoviedb.org/3/"
-    static var imageURL:String = "https://image.tmdb.org/t/p/w500"
-    static var placeholder:UIImage = UIImage(named: "placeholder")!
-    static let mainSB:UIStoryboard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
-    static var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    static var apiKey: String = "d140b2e325f681a0b68c1a936e39df83"
+    static var baseURL: String = "https://api.themoviedb.org/3/"
+    static var imageURL: String = "https://image.tmdb.org/t/p/w500"
+    static var placeholder: UIImage = UIImage(named: "placeholder")!
+    static let mainSB: UIStoryboard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
+    static var appDelegate: AppDelegate? = UIApplication.shared.delegate as? AppDelegate
 }

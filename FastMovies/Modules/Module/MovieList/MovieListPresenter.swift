@@ -10,15 +10,14 @@ import Foundation
 import UIKit
 
 protocol MovieListPresenterInterface: class {
-    
+
     // View -> Presenter
-    func fetchMovies(type:MovieType)
+    func fetchMovies(type: MovieType)
     func showMovieDetail(movie: Movie)
-    
-    
+
     // Interactor -> Presenter
-    func moviesListFetched(moviesList:MovieListResponse)
-    func moviesListFetchFailed(with errorMessage:String)
+    func moviesListFetched(moviesList: MovieListResponse)
+    func moviesListFetchFailed(with errorMessage: String)
 }
 
 class MovieListPresenter {
@@ -32,31 +31,30 @@ class MovieListPresenter {
         self.interactor = interactor
         self.router = router
     }
-    
-    
+
 }
 
 extension MovieListPresenter: MovieListPresenterInterface {
     func showMovieDetail(movie: Movie) {
         router?.pushToDetailVC(movie: movie, view: view)
     }
-    
+
     func fetchMovies(type: MovieType) {
         view.showLoading()
         self.interactor?.fetchMovies(type: type)
     }
-    
+
     func moviesListFetched(moviesList: MovieListResponse) {
         view.hideLoading()
-        if let data = moviesList.results{
+        if let data = moviesList.results {
             view.moviesFetch(moviesList: data)
         }
         view.reloadData()
     }
-    
+
     func moviesListFetchFailed(with errorMessage: String) {
         view.hideLoading()
         view.moviesListFetchFailed(message: errorMessage)
-        
+
     }
 }

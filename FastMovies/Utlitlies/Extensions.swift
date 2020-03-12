@@ -11,8 +11,8 @@ import UIKit
 import CoreData
 
 // Place to define extentions
-extension Date{
-    func movieFilterDate() -> String{
+extension Date {
+    func movieFilterDate() -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy"
         formatter.locale = Locale.init(identifier: "en")
@@ -29,8 +29,8 @@ extension UIRefreshControl {
     }
 }
 
-extension UIImageView{
-    func setShadow(){
+extension UIImageView {
+    func setShadow() {
         self.layer.shadowColor = UIColor.init(red: 55/255.0, green: 55/255.0, blue: 55/255.0, alpha: 1).cgColor
         self.layer.shadowOpacity = 0.5
         self.layer.shadowOffset = CGSize.init(width: 0, height: 2)

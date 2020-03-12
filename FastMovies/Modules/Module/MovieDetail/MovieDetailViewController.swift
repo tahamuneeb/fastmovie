@@ -14,41 +14,41 @@ protocol MovieDetailViewControllerInterface: class {
 
 class MovieDetailViewController: BaseVC {
     var presenter: MovieDetailPresenterInterface?
-    
-    @IBOutlet weak var lblName:UILabel!
-    @IBOutlet weak var lblYear:UILabel!
-    @IBOutlet weak var tvDescription:UITextView!
-    @IBOutlet weak var lblRating:UILabel!
-    @IBOutlet weak var icoStar:UIImageView!
-    @IBOutlet weak var imgMovie:ImageLoader!
-    
-    var movie:Movie?
-    
+
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblYear: UILabel!
+    @IBOutlet weak var tvDescription: UITextView!
+    @IBOutlet weak var lblRating: UILabel!
+    @IBOutlet weak var icoStar: UIImageView!
+    @IBOutlet weak var imgMovie: ImageLoader!
+
+    var movie: Movie?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setMovie()
     }
-    
-    func setMovie(){
+
+    func setMovie() {
         // set movie details
-        if let mov = movie{
+        if let mov = movie {
             lblName.text = mov.title ?? ""
-            lblYear.text = Helper.year(string: mov.release_date ?? "")
+            lblYear.text = Helper.year(string: mov.releaseDate ?? "")
             tvDescription.text = mov.overview ?? ""
-            lblRating.text = String(mov.vote_average?.doubleValue ?? 0)
-            if let poster = mov.poster_path{
-                if let url = URL(string: Constants.imageURL + poster){
+            lblRating.text = String(mov.voteAverage?.doubleValue ?? 0)
+            if let poster = mov.posterPath {
+                if let url = URL(string: Constants.imageURL + poster) {
                     imgMovie.loadImage(url, placeholder: Constants.placeholder)
-                }else{
+                } else {
                     imgMovie.image = Constants.placeholder
                 }
-            }else{
+            } else {
                 imgMovie.image = Constants.placeholder
             }
         }
     }
-    
-    @IBAction func pop(_ sender:UIButton){
+
+    @IBAction func pop(_ sender: UIButton) {
         presenter?.pop()
     }
 }

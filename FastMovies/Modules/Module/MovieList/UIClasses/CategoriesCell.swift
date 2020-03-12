@@ -9,5 +9,5 @@
 import UIKit
 
 class CategoriesCell: UICollectionViewCell {
-    @IBOutlet weak var lblCategory:UILabel!
+    @IBOutlet weak var lblCategory: UILabel!
 }

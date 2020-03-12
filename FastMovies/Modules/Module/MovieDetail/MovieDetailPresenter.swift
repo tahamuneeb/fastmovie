@@ -27,8 +27,7 @@ class MovieDetailPresenter {
 
 extension MovieDetailPresenter: MovieDetailPresenterInterface {
     func pop() {
-        router?.pop(view:view)
+        router?.pop(view: view)
     }
-    
 
 }
