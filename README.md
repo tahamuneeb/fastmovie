@@ -5,6 +5,7 @@ This is an experiment project to develop iOS Application using Viper
 
 * Viper Archietecture.
 * CoreData.
+* Follows Swiftlint standards.
 * Support iOS Dark & Light Mode.
 * Get Movies from MovieDB with 3 filters (Popular, Top Rated, Upcoming).
 * Saves movies with filters values for offline use.
