@@ -13,9 +13,12 @@ This is an experiment project to develop iOS Application using Viper
 
 
 **Light Mode**
-![Image of Screen 1 - Light Mode](https://github.com/tahamuneeb/fastmovie/blob/master/screenshots/1.png)
-![Image of Screen 2 - Light Mode](https://github.com/tahamuneeb/fastmovie/blob/master/screenshots/2.png)
+
+<img src="https://github.com/tahamuneeb/fastmovie/blob/master/screenshots/1.png" width="300px" >
+<img src="https://github.com/tahamuneeb/fastmovie/blob/master/screenshots/2.png" width="300px" >
+
 
 **Dark Mode**
-![Image of Screen 1 - Light Mode](https://github.com/tahamuneeb/fastmovie/blob/master/screenshots/3.png)
-![Image of Screen 2 - Light Mode](https://github.com/tahamuneeb/fastmovie/blob/master/screenshots/4.png)
+
+<img src="https://github.com/tahamuneeb/fastmovie/blob/master/screenshots/3.png" width="300px" >
+<img src="https://github.com/tahamuneeb/fastmovie/blob/master/screenshots/4.png" width="300px" >
